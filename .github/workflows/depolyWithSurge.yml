@@ -22,9 +22,7 @@ jobs:
 
       # Install NodeJS
       - name: Install NodeJS
-        run: actions/setup-node@v2-beta
-        with:
-          node-version: 12
+        run: actions/setup-node@v2.4.1
       
       # Install yarn
       - name: Install yarn
