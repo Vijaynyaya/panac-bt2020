@@ -28,13 +28,13 @@ jobs:
       
       # Install yarn
       - name: Install yarn
-        uses: borales/actions-yarn@v2.0.0
+        uses: Borales/actions-yarn@v2.1.0
         with:
           cmd: install # performs yarn install
       
       # Build react-app
       - name: Build React App with yarn
-        run: yarn build --unsafe-perm=true
+        run: yarn build 
       
       # Install Surge
       - name: Install Surge
