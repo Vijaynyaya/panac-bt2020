@@ -28,7 +28,7 @@ jobs:
       
       # Install yarn
       - name: Install yarn
-        uses: Borales/actions-yarn@v2.1.0
+        uses: borales/actions-yarn@v2.3.0
         with:
           cmd: install # performs yarn install
       
