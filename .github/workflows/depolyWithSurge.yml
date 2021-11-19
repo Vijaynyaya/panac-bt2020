@@ -34,7 +34,7 @@ jobs:
       
       # Build react-app
       - name: Build React App with yarn
-        run: npm run build
+        run: yarn build --unsafe-perm=true
       
       # Install Surge
       - name: Install Surge
