@@ -1,0 +1,11 @@
+.back-beer {
+    background: rgb(255,241,185);
+  background: radial-gradient(circle, rgba(255,241,185,1) 0%, rgba(255,222,133,1) 55%);
+}
+.back-dark {
+    background: rgb(96,93,84);
+background: radial-gradient(circle, rgba(96,93,84,1) 0%, rgba(0,0,0,1) 53%);
+}
+.user {
+    color: lightgoldenrodyellow;
+}
