@@ -1,0 +1,20 @@
+button {
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0.2em;
+	font: inherit;
+	font-family: "Roboto","Helvetica","Arial",sans-serif;
+	cursor: pointer;
+	outline: inherit;
+}
+button:hover {
+	background-color: azure;
+}
+
+.head {   
+	padding: 0 1em;
+	color: rgb(103, 61, 61);
+	font-family: "Roboto","Helvetica","Arial",sans-serif;
+	background-color: '#CFECEC';
+}
