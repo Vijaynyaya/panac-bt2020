@@ -26,7 +26,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
          node-version: 12.x
-         
+      - run: npm build
       - run: npm install -g surge
       - run: echo "Deploying website"
-      - run: surge ./  corona-stats.surge.sh --token ${{ secrets.DEPLOY_TOKEN_CORONA }} 
+      - run: surge ./build  corona-stats.surge.sh --token ${{ secrets.DEPLOY_TOKEN_CORONA }} 
