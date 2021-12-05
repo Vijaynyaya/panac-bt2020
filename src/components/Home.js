@@ -46,7 +46,7 @@ const Home = ({ addToCart }) => {
                         </Typography>
                     </CardContent>
                     <CardActions>
-                        <Button fullWidth={true} variant="contained" sx={{bottom: '0.3rem'}} onClick={()=>{addToCart(index)}}>Add to cart</Button>
+                        <Button fullWidth={true} variant="contained" sx={{bottom: '0.3rem'}} onClick={(e)=>{addToCart(e, index)}}>Add to cart</Button>
                     </CardActions>
                 </Link>
             </Card>})}

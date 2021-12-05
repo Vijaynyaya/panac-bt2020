@@ -30,7 +30,7 @@ const Product = ({addToCart}) => {
         <CardActions>
             <Button fullWidth={true} variant="contained" 
                 sx={{marginTop: '20px', bottom: '2rem'}} 
-                onClick={()=>{addToCart(id)}}
+                onClick={(e)=>{addToCart(e, id)}}
             >
                 Add to cart
             </Button>

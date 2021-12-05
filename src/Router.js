@@ -4,7 +4,8 @@ import { Navbar, Home, Product, Cart } from './components';
 
 const Router = () => {
     const [cart, setCart] = useState([])
-    const addToCart = (id) => {
+    const addToCart = (e, id) => {
+        e.preventDefault()
         if (!cart.includes(id)) {
             setCart([id, ...cart])
         }
