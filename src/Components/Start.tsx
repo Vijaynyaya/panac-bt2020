@@ -23,8 +23,11 @@ function Start({ session, score, categories, setQuestions, setFinished, setAnswe
       {SCORE}
 
       <form id='getQuestions' onSubmit={(e) => {e.preventDefault(); formSubmit()}}>
+        <div className='formItem'>
         <label htmlFor='amount'>No of questions:</label>
         <input type='number' min='1' max='50' name='amount' placeholder="number of questions" defaultValue='5' autoFocus required/>
+        </div>
+        <div className="formItem">
         <label htmlFor='difficulty'>Difficulty level:</label>
         <select name='difficulty'>
           <option value=''>Mixed</option>
@@ -32,12 +35,16 @@ function Start({ session, score, categories, setQuestions, setFinished, setAnswe
           <option value='medium'>Medium</option>
           <option value='hard'>Hard</option>
         </select>
+        </div>
+        <div className="formItem">
         <label htmlFor='type'>Type of questions:</label>
         <select name="type">
           <option value=''>Mixed</option>
           <option value="multiple">Multiple Choice Questions</option>
           <option value='boolean'>True/False</option>
         </select>
+        </div>
+        <div className="formItem">
         <label htmlFor='category'>Category of questions:</label>
         <select name='category'>
           <option value=''>Mixed</option>
@@ -47,6 +54,7 @@ function Start({ session, score, categories, setQuestions, setFinished, setAnswe
             })
           }
         </select>
+        </div>
         <button type="submit">Start the quiz</button>
       </form>
     </div>

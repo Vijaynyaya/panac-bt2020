@@ -27,7 +27,7 @@ function QuestionCard({ question, current, setCurrent, isLast, setFinished, answ
               input = <input defaultChecked onClick={() => answers.addAnswer(String(current), each)}type="radio" name="answer"  value={each}></input>
             }
             return (
-              <div key={each}>
+              <div className='option' key={each}>
                 {input}
                 <label id={each} htmlFor={each}>{decodeHTML(each)}</label>
               </div >
