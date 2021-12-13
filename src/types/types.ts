@@ -20,20 +20,8 @@ export interface Question {
   correct_answer: string;
   incorrect_answers: string[];
   options: string[];
+  answer: null | string;
 }
 export type Status = -1 | 0 | 1;
 
 
-export class Answers {
-  answers: any = {};
-  constructor(n: number) {
-    let obj: any = {}
-    for (let i = 0; i < n; i++) {
-      obj[String(i)] = ''
-    }
-    this.answers = obj;
-  }
-  addAnswer(x: string, y: string) {
-    this.answers[x] = y
-  }
-}

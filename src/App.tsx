@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import { Question , Status, Answers, Category } from './types/types';
+import { Question , Status, Category } from './types/types';
 import { getCategories, generateSession } from './services/Opentbd';
 import { Start, QuestionCard } from './Components';
 
@@ -11,7 +11,6 @@ function App() {
   let [questions, setQuestions] = useState<Question[]>([]);
   let [categories, setCategories] = useState<Category[] | boolean>([]);
   
-  let [answers, setAnswers] = useState<Answers>(new Answers(0));
   let [current, setCurrent] = useState<number>(0);
   let [finished, setFinished] = useState<Status>(-1);
 
@@ -28,8 +27,8 @@ function App() {
   console.log(finished, 'app')
   function computeScore() {
     let score = 0;
-    for (let i in answers.answers) {
-      score = answers.answers[i] === questions[i]['correct_answer']? score + 1 : score;
+    for (let i in questions) {
+      score = questions[i].answer === questions[i]['correct_answer']? score + 1 : score;
     }
     return score
   }
@@ -38,12 +37,12 @@ function App() {
       return <div className="wait">Generating session</div>
     }
     if (session && finished === -1) {
-      return <Start score={null} setQuestions={setQuestions} session={session} categories={categories} setFinished={setFinished} setAnswers={setAnswers}/>
+      return <Start score={null} setQuestions={setQuestions} session={session} categories={categories} setFinished={setFinished}/>
     } else if ( finished === 1) {
       console.log(finished)
-      return <Start score={computeScore()} session={session} setQuestions={setQuestions} categories={categories} setFinished={setFinished} setAnswers={setAnswers}/>
+      return <Start score={computeScore()} session={session} setQuestions={setQuestions} categories={categories} setFinished={setFinished}/>
     } else {
-      return <QuestionCard question={questions[current]} current={current} setCurrent={setCurrent} isLast={questions.length - 1 === current} setFinished={setFinished} answers={answers}/>
+      return <QuestionCard question={questions[current]} current={current} setCurrent={setCurrent} isLast={questions.length - 1 === current} setFinished={setFinished}/>
     }
   }
 

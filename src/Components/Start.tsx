@@ -1,20 +1,19 @@
 import React from 'react';
-import { Answers, Category } from './../types/types';
+import { Category } from './../types/types';
 import { getQuestions } from '../services/Opentbd';
 
-function Start({ session, score, categories, setQuestions, setFinished, setAnswers }) {
+function Start({ session, score, categories, setQuestions, setFinished }) {
   async function formSubmit() {
     let form = document.forms[0]
     setQuestions(
       await getQuestions(Number(form['amount'].value), form['category'].value, form['difficulty'].value, form['type'].value, session)
     )
-    await setAnswers(new Answers(Number(form['amount'])))
     await setFinished(0)
   }  
 
   let SCORE = <div></div>
   if (score !== null) {
-    SCORE = <div className="score">Your got {score} questions correct.</div>
+    SCORE = <div className="score">You got {score} questions correct.</div>
   }
 
   return (

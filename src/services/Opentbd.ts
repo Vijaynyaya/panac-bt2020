@@ -36,6 +36,7 @@ export const getQuestions = async (amount: number, category?: string, difficulty
       let temp = each.incorrect_answers.concat(each.correct_answer)
       temp = shuffleArray(temp)
       results[i].options = temp;
+      results[i].answer = null;
     })
     return results
   }
