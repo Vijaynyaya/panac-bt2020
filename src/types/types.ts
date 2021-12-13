@@ -24,4 +24,3 @@ export interface Question {
 }
 export type Status = -1 | 0 | 1;
 
-

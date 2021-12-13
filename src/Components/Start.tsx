@@ -13,7 +13,7 @@ function Start({ session, score, categories, setQuestions, setFinished }) {
 
   let SCORE = <div></div>
   if (score !== null) {
-    SCORE = <div className="score">You got {score} questions correct.</div>
+    SCORE = <div className="score">You got {score} ques tions correct.</div>
   }
 
   return (
