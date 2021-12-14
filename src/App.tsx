@@ -7,8 +7,14 @@ import { AddTransaction } from './components/AddTransaction'
 
 import { GlobalProvider } from './context/GlobalState'
 
+import { configureNotification } from './services/firebase-sw.js'
+
 function App() {
   return (
+    <div>
+      <div>
+        <button onClick={configureNotification}>Receive Notifications</button>
+      </div>
     <GlobalProvider>
       <Header />
       <div className="container">
@@ -18,6 +24,7 @@ function App() {
         <AddTransaction />
       </div>
     </GlobalProvider>
+    </div>
   );
 }
 
