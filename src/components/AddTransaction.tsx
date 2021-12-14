@@ -1,5 +1,6 @@
 import React, { useState, useContext }from 'react';
 import { GlobalContext } from '../context/GlobalState';
+import { Transaction } from '../types/types';
 
 export const AddTransaction = () => {
     let [text, setText] = useState('')
@@ -9,9 +10,9 @@ export const AddTransaction = () => {
     function onSubmit(e) {
         e.preventDefault()
 
-        const newTransaction = {
+        const newTransaction: Transaction = {
             id: Math.floor(Math.random() * 100000000000),
-            amount: +amount,
+            amount: amount,
             text
         }
 
@@ -30,7 +31,7 @@ export const AddTransaction = () => {
                         Amount <br />
                         (negative - expense, positive - income)
                     </label>
-                    <input type="number" value={amount} onChange={(e) => {setAmount(e.target.value)}} placeholder="Enter amount..." />
+                    <input type="number" value={amount} onChange={(e) => {setAmount(Number(e.target.value))}} placeholder="Enter amount..." />
                 </div>
                 <button className="btn">Add Transaction</button>
             </form>

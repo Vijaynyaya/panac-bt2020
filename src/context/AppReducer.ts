@@ -1,11 +1,13 @@
-export const AppReducer = (state, action) => {
+import { Journal, ActionType, Action } from "../types/types";
+
+export const AppReducer = (state: Journal, action: Action): Journal => {
     switch(action.type) {
-        case 'DELETE_TRANSACTION':
+        case ActionType.DELETE_TRANSACTION:
             return {
                 ...state,
                 transactions: state.transactions.filter(each => each.id !== action.payload)
             }
-        case 'ADD_TRANSACTION':
+        case ActionType.ADD_TRANSACTION:
             return {
                 ...state,
                 transactions: [
