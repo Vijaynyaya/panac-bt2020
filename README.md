@@ -1,4 +1,4 @@
-# COVID-19 Tracker
+# [COVID-19 Tracker](http://trackcovid19vijaynyaya.surge.sh/)
 A dashboard like frontend that displays key statistics regarding COVID-19. Data is sourced from disease.sh
 
 #### Map component is yet TO BE IMPLEMENTED: 
