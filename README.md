@@ -1,4 +1,4 @@
-# Shoe Store implemented using React Router
+# [Minimalist Sample Store](http://samplestorevijaynyaya.surge.sh/) implemented using React Router
 ### Project #3 for Panacloud Bootcamp 2020
 
 // TO DO
